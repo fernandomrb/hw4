@@ -27,7 +27,7 @@ Scenario: restrict to movies with 'PG' or 'R' ratings
   # enter step(s) to uncheck all other checkboxes
   And I uncheck the following ratings: PG-13, G
   # enter step to "submit" the search form on the homepage
-  When I press Refresh
+  When I press "Refresh"
   # enter step(s) to ensure that PG and R movies are visible
   Then I should see movie "The Terminator"
   And I should see movie "When Harry Met Sally"
@@ -43,5 +43,5 @@ Scenario: restrict to movies with 'PG' or 'R' ratings
 
 Scenario: all ratings selected
   Given I check the following ratings: PG, R, PG-13, G
-  When I press Refresh
+  When I press "Refresh"
   Then I should see all the movies
